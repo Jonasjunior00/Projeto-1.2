@@ -18,17 +18,32 @@
 
     $pagina = isset($_GET["pg"]);
     if ($pagina) {
-        switch ($pagina) {
+        switch ($_GET["pg"]) {
             case 'dailyhoroscope':
                 echo '<link rel="stylesheet" href="public/css/horoscopocss.css">';
                 break;
 
-                case 'inicial':
-                    echo '<link rel="stylesheet" href="public/css/meucss.css">';
-                    break;
-           
                 case 'templantes':
                 echo '<link rel="stylesheet" href="public/css/templantes.css">';
+                break;
+
+                case 'inicial':
+                echo '<link rel="stylesheet" href="public/css/meucss.css">';
+                break;
+                case 'musicas':
+                echo '<link rel="stylesheet" href="public/css/meucss.css">';
+                break;
+                case 'cadastro':
+                echo '<link rel="stylesheet" href="public/css/meucss.css">';
+                break;
+                case 'sobre':
+                echo '<link rel="stylesheet" href="public/css/sobre.css">';
+                break;
+                case 'noticias':
+                echo '<link rel="stylesheet" href="public/css/noticias.css">';
+                break;
+                case 'wallpaper':
+                echo '<link rel="stylesheet" href="public/css/wallpaper.css">';
                 break;
 
             default:
@@ -64,16 +79,16 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Perfil</a>
-                            <a class="dropdown-item" href="#">Cadastrar</a>
+                            <a class="dropdown-item" href="?pg=cadastro">Cadastrar</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Visitante</a>
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link btn-outline-secondary" href="">Home <span class="sr-only">(página atual)</span></a>
+                        <a class="nav-link btn-outline-secondary" href="?pg=inicial">Home <span class="sr-only">(página atual)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  btn-outline-secondary" href="#">Sobre</a>
+                        <a class="nav-link  btn-outline-secondary" href="?pg=sobre">Sobre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#"></a>
